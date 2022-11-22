@@ -1,0 +1,56 @@
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.popular {
+    position: absolute;
+    top: 80%;
+    color: white;
+    text-align: left;
+    font-size: x-large;
+}
+
+.series {
+    margin-top: 4%;
+    color: white;
+    text-align: left;
+    font-size: x-large;
+}
+
+.Poster {
+    height: 550px;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 400px) {
+    .home {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .home h3 {
+        margin-left: 4%
+    }
+
+    .popular {
+        position: absolute;
+        top: 55%;
+    }
+
+
+    .series {
+        margin-top: 50%;
+        text-align: left;
+        font-size: x-large;
+    }
+
+    .Poster {
+        height: 400px;
+        overflow: hidden;
+    }
+}

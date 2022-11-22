@@ -1,0 +1,43 @@
+.card {
+    height: 220px;
+    width: 400px;
+    color: white;
+    border-radius: 4px;
+    padding: 0 10px;
+}
+
+.hovering {
+    background-color: #141414;
+    color: white;
+    height: 100px;
+    margin-top: 2%;
+    padding: 2%;
+
+}
+
+.hoverCard:hover {
+    transform: scale(1.0) translateY(-50px);
+    position: relative;
+    background-color: #141414;
+    z-index: 1;
+    animation-duration: 3s;
+    animation-name: card;
+}
+
+@keyframes card {
+    0% {
+        height: 100px;
+        transform: scale(1.1) translateY(-40px);
+    }
+
+    25% {
+        height: 220px;
+        transform: scale(1.2) translateY(-50px);
+    }
+}
+
+.cardNavigation {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}

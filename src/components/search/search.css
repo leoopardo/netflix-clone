@@ -1,0 +1,39 @@
+.search-btn {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    color: white
+}
+
+.search {
+    display: flex;
+}
+
+.search-ipt {
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    display: none;
+}
+
+.search-ipt-hover {
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    display: flex;
+    animation-duration: 3s;
+    animation-name: exemple;
+    transition: width 2s, height 2s;
+}
+
+.search-ipt-hover:hover {
+    width: 200px
+}
+
+@keyframes exemple {
+    0% {
+        width: 0px
+    }
+
+    25% {
+        width: 180px
+    }
+
+}

@@ -4,7 +4,6 @@ import "./carousel.css";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { Movie } from "../../types/movie";
-import { useNavigate } from "react-router-dom";
 
 export interface carouselProps {
   section: string;

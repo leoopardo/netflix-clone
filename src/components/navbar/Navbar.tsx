@@ -1,13 +1,11 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { Dropdown } from "../dropdown/dropdown";
-import SearchIcon from "@mui/icons-material/Search";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import "./navbar.css";
 import { Avatar } from "@mui/material";
 import { Search } from "../search/search";
 const logo = require("../../assets/logo.png");
 export function Navbar() {
-  const [width, setWidth] = useState(1024);
   const list = ["Início", "Filmes", "Séries", "Animações"];
 
   useEffect(() => {});

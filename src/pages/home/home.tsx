@@ -1,12 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Card } from "../../components/card/card";
 import { Movie } from "../../types/movie";
-import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-
 import "./home.css";
-import { padding } from "@mui/system";
 import { CarouselComp } from "../../components/carousel/carousel";
 export function Home() {
   const [popularMovies, setPopularMovies] = useState<Movie[] | null>([]);

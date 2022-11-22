@@ -37,15 +37,14 @@ export function Home() {
     };
     fetchMovies();
   }, []);
-  console.log(popularSeries);
   return (
     <>
       <div className="home">
         {popularMovies?.map((m, i) => {
-          console.log(Random);
           if (i === Random) {
             return (
               <div
+                key={i}
                 className="Poster"
                 style={{
                   backgroundImage: `url(https://image.tmdb.org/t/p/original/${m.backdrop_path})`,
@@ -55,6 +54,7 @@ export function Home() {
               ></div>
             );
           }
+          return <div key={i}></div>;
         })}
         <div className="popular">
           <div style={{ display: "flex", justifyContent: "flex-start" }}>

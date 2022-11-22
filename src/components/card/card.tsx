@@ -15,6 +15,7 @@ export const Card: FC<cardProps> = ({ image, title }) => {
   return (
     <div onMouseLeave={() => setIsHovering(false)} className="hoverCard">
       <div
+        key={title}
         onMouseOver={() => setIsHovering(true)}
         className="card"
         style={{

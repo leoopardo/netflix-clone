@@ -36,17 +36,24 @@ export const CarouselComp: FC<carouselProps> = ({ section, movieData }) => {
       <div className="carousel-wrapper">
         {currentIndex > 0 && (
           <button className="left-arrow" onClick={prev}>
-            <ArrowBackIosIcon fontSize="large" className="l-arrow"  />
+            <ArrowBackIosIcon fontSize="large" className="l-arrow" />
           </button>
         )}
 
         <div className="carousel-content-wrapper">
           <div
             className="carousel-content"
-            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+            style={{transform: `translateX(-${currentIndex * 100}%)` }}
           >
             {movieData?.map((m) => {
-              return <Card image={m.backdrop_path} title={m.title || m.original_name} />;
+              return (
+                <div key={m.id}>
+                  <Card
+                    image={m.backdrop_path}
+                    title={m.title || m.original_name}
+                  />
+                </div>
+              );
             })}
           </div>
 

@@ -5,6 +5,8 @@ import "./home.css";
 import { CarouselComp } from "../../components/carousel/carousel";
 export function Home() {
   const [popularMovies, setPopularMovies] = useState<Movie[] | null>([]);
+  const [root, setRoot] = useState<any>([]);
+  // const [movie, setMovie] = useState<Movie>();
   const [popularSeries, setPopularSeries] = useState<Movie[] | null>([]);
   const [Random, setRandom] = useState(0);
   useEffect(() => {
@@ -27,11 +29,35 @@ export function Home() {
           ).data.results
         );
       } catch (error) {
-        console.log(error);
+        console.error(error);
       }
     };
     fetchMovies();
   }, []);
+
+  useEffect(() => {
+    const fetchVideos = async () => {
+      let movie;
+      if (popularMovies) movie = popularMovies[Random];
+      try {
+        if (popularMovies) {
+          setRoot(
+            (
+              await axios.get(
+                `https://api.themoviedb.org/3/movie/${movie?.id}?api_key=c5c349384529e378af57b5fddb9b7b9b`
+              )
+            ).data.results
+          );
+        }
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    fetchVideos();
+  }, [Random]);
+
+  console.log(root);
+
   return (
     <>
       <div className="home">
@@ -46,7 +72,7 @@ export function Home() {
                   backgroundSize: "cover",
                   width: "100%",
                 }}
-              ></div>
+              />
             );
           }
           return <div key={i}></div>;
